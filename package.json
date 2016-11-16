@@ -1,7 +1,7 @@
 {
-  "name": "panic-api",
+  "name": "koa-api",
   "version": "1.0.0",
-  "description": "websocket api for panic",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "COMPOSE_PROJECT_NAME=test docker-compose -f docker-compose.test.yml kill && docker-compose -f docker-compose.test.yml rm -f && docker-compose -f docker-compose.test.yml up --force-recreate",
@@ -12,11 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/4syt/api.git"
+    "url": "git+ssh://github.com/getneil/koa-api.git"
   },
   "author": "Neil Molina <get.neilmolina@gmail.com>",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/4syt/api#readme",
+  "homepage": "https://github.com/getneil/koa-api",
   "dependencies": {
     "co": "^4.6.0",
     "fs-extra": "^1.0.0",
