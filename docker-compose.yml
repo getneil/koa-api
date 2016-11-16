@@ -1,0 +1,25 @@
+version: '2'
+networks:
+  boilerplate:
+    driver: bridge
+services:
+  api:
+    extends:
+      file: common.yml
+      service: api
+    entrypoint:
+      - npm
+      - run
+      - dev
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/usr/src/
+    networks:
+      - boilerplate
+  redis:
+    extends:
+      file: common.yml
+      service: redis
+    networks:
+      - boilerplate

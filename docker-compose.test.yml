@@ -1,0 +1,21 @@
+version: '2'
+networks:
+  boilerplate-test:
+    driver: bridge
+services:
+  api:
+    extends:
+      file: common.yml
+      service: api
+    entrypoint:
+      - npm
+      - run
+      - test:container
+    networks:
+      - boilerplate-test
+  redis:
+    extends:
+      file: common.yml
+      service: redis
+    networks:
+      - boilerplate-test

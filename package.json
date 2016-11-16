@@ -1,0 +1,47 @@
+{
+  "name": "panic-api",
+  "version": "1.0.0",
+  "description": "websocket api for panic",
+  "main": "server.js",
+  "scripts": {
+    "test": "COMPOSE_PROJECT_NAME=test docker-compose -f docker-compose.test.yml kill && docker-compose -f docker-compose.test.yml rm -f && docker-compose -f docker-compose.test.yml up --force-recreate",
+    "test:container": "mocha --reporter spec --colors --slow 0 ./test/*.test.js",
+    "start": "node server.js",
+    "compile:watch": "tsc -w",
+    "dev": "NODE_ENV=development nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/4syt/api.git"
+  },
+  "author": "Neil Molina <get.neilmolina@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/4syt/api#readme",
+  "dependencies": {
+    "co": "^4.6.0",
+    "fs-extra": "^1.0.0",
+    "ioredis": "^2.4.0",
+    "jsonwebtoken": "^7.1.9",
+    "koa": "2",
+    "koa-better-body": "^3.0.2",
+    "koa-body": "2",
+    "koa-generic-session": "^1.11.3",
+    "koa-redis": "^2.1.2",
+    "koa-router": "next",
+    "koa-session-store": "^2.0.0",
+    "password-hash": "^1.2.2",
+    "sequelize": "3.25.0",
+    "socket.io": "^1.5.1",
+    "sqlite3": "^3.1.8",
+    "supertest": "^2.0.1",
+    "supertest-as-promised": "^4.0.2",
+    "supertest-koa-agent": "^0.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0",
+    "socket.io-client": "^1.5.1"
+  }
+}

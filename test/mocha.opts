@@ -1,0 +1,5 @@
+--harmony
+--reporter mocha-multi
+--reporter-options spec=-,xunit=test/reports/mocha-xunit.xml
+--timeout 15000
+test/**/*.test.js
